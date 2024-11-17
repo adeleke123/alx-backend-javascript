@@ -19,16 +19,16 @@ Resources
 ---------
 **Read or watch:**
 -  [ECMAScript 6 - ECMAScript 2015](https://intranet.alxswe.com/rltoken/NW1dFLFExQ12_hD8yvkV3A)
--  Statements and declarations
--  Arrow functions
--  Default parameters
--  Rest parameter
--  Javascript ES6 — Iterables and Iterators
+-  [Statements and declarations}(https://intranet.alxswe.com/rltoken/sroRUsUvOZV28V99MHDenw)
+-  [Arrow functions](https://intranet.alxswe.com/rltoken/N2WLylppCtkkX3YFFtyUHw)
+-  [Default parameters](https://intranet.alxswe.com/rltoken/kbw9gMO6sdeOKAY23SYVgA)
+-  [Rest parameter](https://intranet.alxswe.com/rltoken/erZfCvacuGVk9z1CQlJvYQ)
+-  [Javascript ES6 — Iterables and Iterators](https://intranet.alxswe.com/rltoken/Xu2HqkiKkrN7z1v9DL37fw)
 
 
 Learning Objectives
 -------------------
-At the end of this project, you are expected to be able to explain to anyone, **without the help of Google:**
+At the end of this project, you are expected to be able to [explain to anyone](https://intranet.alxswe.com/rltoken/KDGvEqVWIsvOQfCcwDNHNg), **without the help of Google:**
 
 -  What ES6 is
 -  New features introduced in ES6
@@ -44,14 +44,14 @@ At the end of this project, you are expected to be able to explain to anyone, **
 Requirements
 ------------
 ### General
-All your files will be executed on Ubuntu 18.04 LTS using NodeJS 12.11.x
-Allowed editors: `vi`, `vim`, `emacs`, `Visual Studio Code`
-All your files should end with a new line
-A `README.md` file, at the root of the folder of the project, is mandatory
-Your code should use the `js` extension
-Your code will be tested using the `Jest Testing Framework`
-Your code will be analyzed using the linter `ESLint` along with specific rules that we’ll provide
-All of your functions must be exported
+- All your files will be executed on Ubuntu 18.04 LTS using NodeJS 12.11.x
+- Allowed editors: `vi`, `vim`, `emacs`, `Visual Studio Code`
+- All your files should end with a new line
+- A `README.md` file, at the root of the folder of the project, is mandatory
+- Your code should use the `js` extension
+- Your code will be tested using the `Jest Testing Framework`
+- Your code will be analyzed using the linter `ESLint` along with specific rules that we’ll provide
+- All of your functions must be exported
 
 Setup
 -----
@@ -187,8 +187,6 @@ export function taskNext() {
 }
 ```
 
-```
-
 Execution example:
 
 ```
@@ -201,6 +199,7 @@ bob@dylan:~$
 bob@dylan:~$ npm run dev 0-main.js 
 I prefer const when I can. But sometimes let is okay
 bob@dylan:~$ 
+
 ```
 + Repo:
 
@@ -208,10 +207,10 @@ bob@dylan:~$
 - Directory: `0x00-ES6_basic`
 - File: `0-constants.js`
 ```   
-1. Block Scope
-mandatory
-Given what you’ve read about var and hoisting, modify the variables inside the function taskBlock so that the variables aren’t overwritten inside the conditional block.
+### 1. Block Scope    mandatory
 
+Given what you’ve read about `var` and hoisting, modify the variables inside the function `taskBlock` so that the variables aren’t overwritten inside the conditional block.
+```
 export default function taskBlock(trueOrFalse) {
   var task = false;
   var task2 = true;
@@ -223,8 +222,10 @@ export default function taskBlock(trueOrFalse) {
 
   return [task, task2];
 }
+```
 Execution:
 
+```
 bob@dylan:~$ cat 1-main.js
 import taskBlock from './1-block-scoped.js';
 
@@ -235,16 +236,19 @@ bob@dylan:~$ npm run dev 1-main.js
 [ false, true ]
 [ false, true ]
 bob@dylan:~$
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x00-ES6_basic
-File: 1-block-scoped.js
+```
+
++ Repo:
+
+- GitHub repository: `alx-backend-javascript`
+- Directory: `0x00-ES6_basic`
+- File: `1-block-scoped.js`
    
-2. Arrow functions
-mandatory
-Rewrite the following standard function to use ES6’s arrow syntax of the function add (it will be an anonymous function after)
+### 2. Arrow functions mandatory
 
+Rewrite the following standard function to use ES6’s arrow syntax of the function `add` (it will be an anonymous function after)
+```
 export default function getNeighborhoodsList() {
   this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
@@ -254,8 +258,10 @@ export default function getNeighborhoodsList() {
     return self.sanFranciscoNeighborhoods;
   };
 }
-Execution:
+```
 
+Execution:
+```
 bob@dylan:~$ cat 2-main.js
 import getNeighborhoodsList from './2-arrow.js';
 
@@ -266,18 +272,20 @@ bob@dylan:~$
 bob@dylan:~$ npm run dev 2-main.js 
 [ 'SOMA', 'Union Square', 'Noe Valley' ]
 bob@dylan:~$
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x00-ES6_basic
-File: 2-arrow.js
-   
-3. Parameter defaults
-mandatory
+```
++ Repo:
+
+- GitHub repository: `alx-backend-javascript`
+- Directory: `0x00-ES6_basic`
+- File: `2-arrow.js`
+
+### 3. Parameter defaults mandatory
+
 Condense the internals of the following function to 1 line - without changing the name of each function/variable.
 
 Hint: The key here to define default parameter values for the function parameters.
-
+```
 export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
   if (expansion1989 === undefined) {
     expansion1989 = 89;
@@ -288,8 +296,9 @@ export default function getSumOfHoods(initialNumber, expansion1989, expansion201
   }
   return initialNumber + expansion1989 + expansion2019;
 }
+```
 Execution:
-
+```
 bob@dylan:~$ cat 3-main.js
 import getSumOfHoods from './3-default-parameter.js';
 
@@ -302,6 +311,7 @@ bob@dylan:~$ npm run dev 3-main.js
 56
 41
 bob@dylan:~$
+```
 Repo:
 
 GitHub repository: alx-backend-javascript
